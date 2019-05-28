@@ -1,0 +1,62 @@
+{
+  "name": "kp-player",
+  "version": "0.0.3",
+  "description": "",
+  "main": "bundle.min.js",
+  "scripts": {
+    "compile": "./node_modules/.bin/babel -d build/ source/js/",
+    "dev-start": "./node_modules/.bin/electron -r babel-register source/js/index.js",
+    "start": "electron .",
+    "prod": "webpack --define process.env.NODE_ENV='\"production\"' --config ./webpack.prod.config.js",
+    "lint-staged": "lint-staged"
+  },
+  "pre-commit": "lint-staged",
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mordenius/kp-player.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mordenius/kp-player/issues"
+  },
+  "homepage": "https://github.com/mordenius/kp-player#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-minify-webpack-plugin": "^0.2.0",
+    "babel-preset-bbt": "0.0.6",
+    "babel-preset-electron": "^1.4.15",
+    "babili-webpack-plugin": "^0.1.2",
+    "clean-webpack-plugin": "^0.1.17",
+    "electron-packager": "^9.1.0",
+    "eslint": "^4.11.0",
+    "eslint-config-bbt": "^1.0.1",
+    "lint-staged": "^4.3.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.8.2",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "bbt-loader": "^1.0.10",
+    "body-parser": "^1.18.2",
+    "electron": "~1.7.8",
+    "express": "^4.16.2",
+    "ip": "^1.1.5",
+    "lodash": "^4.17.4",
+    "manufactura": "0.0.6",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.19.2",
+    "redux-store-controller": "^1.1.3",
+    "request": "^2.81.0",
+    "rimraf": "^2.6.2",
+    "screenshot-desktop": "^1.2.0",
+    "socket.io-client": "^2.0.4",
+    "tar-fs": "^1.16.0"
+  }
+}
