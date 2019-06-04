@@ -10,7 +10,7 @@ module.exports = {
     ],
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'main.min.js'
+        filename: 'index.min.js'
     },
     module: {
         rules: [
@@ -24,7 +24,7 @@ module.exports = {
                   
             },
             {
-                test: /\.(ttf|woff|svg|eot|png|jpg)$/,
+                test: /\.(ttf|woff|svg|eot|png|jpg|jpeg)$/,
                 use: [
                     {
                         loader: 'file-loader',

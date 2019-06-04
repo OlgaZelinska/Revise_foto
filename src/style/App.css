@@ -4,3 +4,10 @@ h1 {
     text-align: center;
     background: #bfddf3;
 }
+#modal{
+    color: #3709a1;
+    text-align: center;
+    background: #755cb9; 
+    width: 50%;
+    height: 200px;
+}
